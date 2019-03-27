@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2b87808a-94a6-4229-9d2c-e7d977b4a198" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/OwnerController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/OwnerController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/Owners/editOwner.blade.php" afterPath="$PROJECT_DIR$/resources/views/Owners/editOwner.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/CarController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/CarController.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -29,23 +27,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="OwnerController.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/OwnerController.php">
+      <file leaf-file-name="cars.blade.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/views/cars/cars.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="117" column="228" lean-forward="false" selection-start-line="117" selection-start-column="228" selection-end-line="117" selection-end-column="228" />
-              <folding>
-                <element signature="e#40#52#0#PHP" expanded="true" />
-              </folding>
+            <state relative-caret-position="285">
+              <caret line="76" column="57" lean-forward="false" selection-start-line="76" selection-start-column="57" selection-end-line="76" selection-end-column="57" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="editCarDetail.blade.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/resources/views/ownerDetails/editCarDetail.blade.php">
+      <file leaf-file-name="CarController.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/CarController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-68">
-              <caret line="81" column="89" lean-forward="false" selection-start-line="81" selection-start-column="75" selection-end-line="81" selection-end-column="89" />
+            <state relative-caret-position="227">
+              <caret line="25" column="14" lean-forward="false" selection-start-line="25" selection-start-column="14" selection-end-line="25" selection-end-column="14" />
               <folding />
             </state>
           </provider>
@@ -97,7 +93,6 @@
         <option value="$PROJECT_DIR$/resources/views/payments/makePayment.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/payments/newPayment-text.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/DriversController.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/CarController.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/PaymentController.php" />
         <option value="$PROJECT_DIR$/resources/views/Owners/listOwner.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/payments/payment-text.blade.php" />
@@ -110,6 +105,7 @@
         <option value="$PROJECT_DIR$/app/Http/Controllers/Controller.php" />
         <option value="$PROJECT_DIR$/resources/views/Owners/editOwner.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/OwnerController.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/CarController.php" />
       </list>
     </option>
   </component>
@@ -194,7 +190,7 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="ownerDetails" />
+              <option name="myItemId" value="cars" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -389,12 +385,12 @@
       <workItem from="1553263172496" duration="659000" />
       <workItem from="1553263930584" duration="636000" />
       <workItem from="1553521617296" duration="450000" />
-      <workItem from="1553693454978" duration="7521000" />
+      <workItem from="1553693454978" duration="7761000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="283520000" />
+    <option name="totallyTimeSpent" value="283760000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="0" />
@@ -593,13 +589,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/cars/cars.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="73" column="20" lean-forward="false" selection-start-line="73" selection-start-column="20" selection-end-line="73" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/DashboardController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="221">
@@ -611,13 +600,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
           <caret line="16" column="0" lean-forward="true" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/CarController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="22" column="10" lean-forward="true" selection-start-line="18" selection-start-column="6" selection-end-line="22" selection-end-column="10" />
         </state>
       </provider>
     </entry>
@@ -786,6 +768,14 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/ownerDetails/editCarDetail.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-68">
+          <caret line="81" column="89" lean-forward="false" selection-start-line="81" selection-start-column="75" selection-end-line="81" selection-end-column="89" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/OwnerController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
@@ -796,10 +786,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/ownerDetails/editCarDetail.blade.php">
+    <entry file="file://$PROJECT_DIR$/resources/views/cars/cars.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-68">
-          <caret line="81" column="89" lean-forward="false" selection-start-line="81" selection-start-column="75" selection-end-line="81" selection-end-column="89" />
+        <state relative-caret-position="285">
+          <caret line="76" column="57" lean-forward="false" selection-start-line="76" selection-start-column="57" selection-end-line="76" selection-end-column="57" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/CarController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="227">
+          <caret line="25" column="14" lean-forward="false" selection-start-line="25" selection-start-column="14" selection-end-line="25" selection-end-column="14" />
           <folding />
         </state>
       </provider>
