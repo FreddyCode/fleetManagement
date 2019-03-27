@@ -40,9 +40,11 @@
       <file leaf-file-name="CarController.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/CarController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="261">
+            <state relative-caret-position="249">
               <caret line="27" column="14" lean-forward="true" selection-start-line="27" selection-start-column="14" selection-end-line="27" selection-end-column="14" />
-              <folding />
+              <folding>
+                <element signature="e#40#57#0#PHP" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -385,12 +387,12 @@
       <workItem from="1553263172496" duration="659000" />
       <workItem from="1553263930584" duration="636000" />
       <workItem from="1553521617296" duration="450000" />
-      <workItem from="1553693454978" duration="8705000" />
+      <workItem from="1553693454978" duration="9120000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="284704000" />
+    <option name="totallyTimeSpent" value="285119000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="0" />
@@ -796,9 +798,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/CarController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="261">
+        <state relative-caret-position="249">
           <caret line="27" column="14" lean-forward="true" selection-start-line="27" selection-start-column="14" selection-end-line="27" selection-end-column="14" />
-          <folding />
+          <folding>
+            <element signature="e#40#57#0#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

@@ -23,7 +23,7 @@ class CarController extends Controller
         );
         if($request->ajax())
         {
-            Audit::insert(['user' => Auth::user()->first_name." ".Auth::user()->last_name, 'activity' => 'A new car added '. $request->car_name, 'act_date' => date('Y-m-d'), 'act_time' => time('H:i:s')]);
+            Audit::updateOrCreate(['user' => Auth::user()->first_name." ".Auth::user()->last_name, 'activity' => 'A new car added '. $request->car_name, 'act_date' => date('Y-m-d'), 'act_time' => time('H:i:s')]);
             return response()->json(Car::create($request->all()));
         }else{
             return response()->json(['error' => 'Something went wrong!'], 422);
