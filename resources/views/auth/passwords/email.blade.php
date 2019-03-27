@@ -48,7 +48,7 @@
                     </span>
                 @endif
             </div>
-            <span class="pull-right"> <a href="/login"><font color="#FF8000"> Back to Login</font></a></span>
+            <span class="pull-right"> <a href="/"><font color="#FF8000"> Back to Login</font></a></span>
             <button class="btn btn btn-lg btn-block" type="submit">{{ __('Send Password Reset Link') }}</button>
         </div>
     </form>
