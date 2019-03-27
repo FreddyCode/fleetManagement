@@ -63,7 +63,7 @@
                                 <label for="first-name">
                                     <legend>First Name</legend>
                                 </label>
-                                <input type="text" name="first_name" id="first_name" class="form-control" value={{$carowner->first_name}}>
+                                <input type="text" name="first_name" id="first_name" class="form-control" value="{{$carowner->first_name}}">
                             </div>
                         </div>
                         <div class="col-md-6">
@@ -71,7 +71,7 @@
                                 <label for="last-name">
                                     <legend>Last Name</legend>
                                 </label>
-                                <input type="text" name="last_name" id="last_name" class="form-control" value={{$carowner->last_name}}>
+                                <input type="text" name="last_name" id="last_name" class="form-control" value="{{$carowner->last_name}}">
                             </div>
                         </div>
                         <div class="col-md-6">
@@ -79,7 +79,7 @@
                                 <label for="email">
                                     <legend>Email</legend>
                                 </label>
-                                <input type="email" name="email" id="email" class="form-control" value={{$carowner->email}}>
+                                <input type="email" name="email" id="email" class="form-control" value="{{$carowner->email}}">
                             </div>
                         </div>
                         <div class="col-md-6">
@@ -87,7 +87,7 @@
                                 <label for="tel">
                                     <legend>Telephone</legend>
                                 </label>
-                                <input type="tel" name="telephone" id="telephone" class="form-control" value={{$carowner->telephone}}>
+                                <input type="tel" name="telephone" id="telephone" class="form-control" value="{{$carowner->telephone}}">
                             </div>
                         </div>
                         <div class="col-md-9">
@@ -95,7 +95,7 @@
                                 <label for="address">
                                     <legend>Address</legend>
                                 </label>
-                                <input type="text" name="address" id="address" class="form-control" value={{$carowner->address}}>
+                                <input type="text" name="address" id="address" class="form-control" value="{{$carowner->address}}">
                             </div>
                         </div>
 
@@ -137,7 +137,7 @@
                                         <label for="bank">
                                             <legend>Bank Name</legend>
                                         </label>
-                                        <input type="text" name="bank" id="bank" class="form-control" value={{$carowner->bank}}>
+                                        <input type="text" name="bank" id="bank" class="form-control" value="{{$carowner->bank}}">
                                     </div>
                                 </div>
                                 <div class="col-md-4">
@@ -145,7 +145,7 @@
                                         <label for="num">
                                             <legend>Account Number</legend>
                                         </label>
-                                        <input type="text" name="account_number" id="account_number" class="form-control" value={{$carowner->account_number}}>
+                                        <input type="text" name="account_number" id="account_number" class="form-control" value="{{$carowner->account_number}}">
                                     </div>
                                 </div>
                                 <div class="col-md-4">
@@ -153,7 +153,7 @@
                                         <label for="bank">
                                             <legend>Branch</legend>
                                         </label>
-                                        <input type="text" name="branch" id="branch" class="form-control" value={{$carowner->branch}}>
+                                        <input type="text" name="branch" id="branch" class="form-control" value="{{$carowner->branch}}">
                                     </div>
                                 </div>
                             </div>
