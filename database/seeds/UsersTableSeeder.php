@@ -13,9 +13,9 @@ class UsersTableSeeder extends Seeder
     public function run()
     {
         User::create([
-            'first_name'=>'Fred',
-            'last_name'=>'Clinton',
-            'email'=>'clinton@enshika.com',
+            'first_name'=>'Enshika',
+            'last_name'=>'Admin',
+            'email'=>'admin@enshika.com',
             'password' => 'admin',
             'remember_token' => str_random(10),
 
