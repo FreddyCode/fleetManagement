@@ -115,8 +115,8 @@ class OwnerController extends Controller
         $ow->branch = strtoupper($request->branch);
         $ow->image =$request->has('image') ? $file : $ow->image;
         $ow->save();
-        Audit::create(['user' => Auth::user()->first_name." ".Auth::user()->last_name, 'activity' => 'Updated car owner '. $request->first_name." ".$request->last_name, 'act_date' => date('Y-m-d'), 'act_time' => time('H:i:s')]);
         return redirect('/car-owners')->with('success', "Car owner has been updated successfully");
+        Audit::create(['user' => Auth::user()->first_name." ".Auth::user()->last_name, 'activity' => 'Updated car owner '. $request->first_name." ".$request->last_name, 'act_date' => date('Y-m-d'), 'act_time' => time('H:i:s')]);
     }
     //===================================================================================================
 
