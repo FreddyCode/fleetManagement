@@ -23,12 +23,6 @@ class CarController extends Controller
         );
         if($request->ajax())
         {
-//            $audit = new Audit();
-//            $audit->user = Auth::user()->first_name." ".Auth::user()->last_name;
-//            $audit->activity = 'A new car added '. $request->car_name;
-//            $audit->act_date = date('Y-m-d');
-//            $audit->act_time = date("h:i:s");
-
            Audit::create(['user' => Auth::user()->first_name." ".Auth::user()->last_name, 'activity' => 'A new car added '. $request->car_name, 'act_date' => date('Y-m-d'), 'act_time' => date('H:i:s')]);
             return response()->json(Car::create($request->all()));
         }else{
@@ -58,7 +52,7 @@ class CarController extends Controller
     {
         if($request->ajax())
         {
-            Audit::create(['user' => Auth::user()->first_name." ".Auth::user()->last_name, 'activity' => 'Update car with name '. $request->car_name, 'act_date' => date('Y-m-d'), 'act_time' => time('H:i:s')]);
+            Audit::create(['user' => Auth::user()->first_name." ".Auth::user()->last_name, 'activity' => 'Update car with name '. $request->car_name, 'act_date' => date('Y-m-d'), 'act_time' => date('H:i:s')]);
             return response(Car::updateOrCreate(['car_id'=>$request->car_id],$request->all()));
         }
     }
@@ -66,7 +60,7 @@ class CarController extends Controller
     {
         if($request->ajax())
         {
-            Audit::create(['user' => Auth::user()->first_name." ".Auth::user()->last_name, 'activity' => 'Deleted a car', 'act_date' => date('Y-m-d'), 'act_time' => time('H:i:s')]);
+            Audit::create(['user' => Auth::user()->first_name." ".Auth::user()->last_name, 'activity' => 'Deleted a car', 'act_date' => date('Y-m-d'), 'act_time' => date('H:i:s')]);
             Car::destroy($request->car_id);
         }
     }
@@ -88,7 +82,7 @@ class CarController extends Controller
         );
         if($request->ajax())
         {
-            Audit::create(['user' => Auth::user()->first_name." ".Auth::user()->last_name, 'activity' => 'A new model added '. $request->model_name, 'act_date' => date('Y-m-d'), 'act_time' => time('H:i:s')]);
+            Audit::create(['user' => Auth::user()->first_name." ".Auth::user()->last_name, 'activity' => 'A new model added '. $request->model_name, 'act_date' => date('Y-m-d'), 'act_time' => date('H:i:s')]);
             return response(CarModel::create($request->all()));
         }
     }
@@ -116,7 +110,7 @@ class CarController extends Controller
     {
         if($request->ajax())
         {
-            Audit::create(['user' => Auth::user()->first_name." ".Auth::user()->last_name, 'activity' => 'Updated a model with name '. $request->model_name, 'act_date' => date('Y-m-d'), 'act_time' => time('H:i:s')]);
+            Audit::create(['user' => Auth::user()->first_name." ".Auth::user()->last_name, 'activity' => 'Updated a model with name '. $request->model_name, 'act_date' => date('Y-m-d'), 'act_time' => date('H:i:s')]);
             return response(CarModel::updateOrCreate(['model_id'=>$request->model_id],$request->all()));
         }
     }
@@ -125,7 +119,7 @@ class CarController extends Controller
         if($request->ajax())
         {
             CarModel::destroy($request->model_id);
-            Audit::create(['user' => Auth::user()->first_name." ".Auth::user()->last_name, 'activity' => 'Deleted a model', 'act_date' => date('Y-m-d'), 'act_time' => time('H:i:s')]);
+            Audit::create(['user' => Auth::user()->first_name." ".Auth::user()->last_name, 'activity' => 'Deleted a model', 'act_date' => date('Y-m-d'), 'act_time' =>date('H:i:s')]);
         }
     }
 }

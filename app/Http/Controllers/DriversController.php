@@ -72,7 +72,7 @@ class DriversController extends Controller
         $driver->license = $license;
         $driver->identity = $identity;
         if($driver->save()){
-            Audit::create(['user' => Auth::user()->first_name." ".Auth::user()->last_name, 'activity' => 'added a new driver with name ' . $request->first_name." ".$request->last_name, 'act_date' => date('Y-m-d'), 'act_time' => time('H:i:s')]);
+            Audit::create(['user' => Auth::user()->first_name." ".Auth::user()->last_name, 'activity' => 'added a new driver with name ' . $request->first_name." ".$request->last_name, 'act_date' => date('Y-m-d'), 'act_time' => date('H:i:s')]);
             return back()->with(['success' => "Driver with details Created Successfully"]);
         }
         }catch (QueryException $e)
@@ -143,7 +143,7 @@ class DriversController extends Controller
             $driver->license = $request->has('license') ? $license : $driver->license;
             $driver->identity = $request->has('identity') ? $identity : $driver->identity;
             $driver->save();
-            Audit::create(['user' => Auth::user()->first_name." ".Auth::user()->last_name, 'activity' => 'Updated driver with name ' . $request->first_name." ".$request->last_name, 'act_date' => date('Y-m-d'), 'act_time' => time('H:i:s')]);
+            Audit::create(['user' => Auth::user()->first_name." ".Auth::user()->last_name, 'activity' => 'Updated driver with name ' . $request->first_name." ".$request->last_name, 'act_date' => date('Y-m-d'), 'act_time' => date('H:i:s')]);
             return redirect('/drivers-list')->with('success', "Driver $request->first_name has been updated successfully");
     }
 

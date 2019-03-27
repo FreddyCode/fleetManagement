@@ -66,7 +66,7 @@ class OwnerController extends Controller
         //dd($request->all());
 
         if ($ow->save()) {
-            Audit::create(['user' => Auth::user()->first_name." ".Auth::user()->last_name, 'activity' => 'A new owner added '. $request->first_name." ".$request->last_name, 'act_date' => date('Y-m-d'), 'act_time' => time('H:i:s')]);
+            Audit::create(['user' => Auth::user()->first_name." ".Auth::user()->last_name, 'activity' => 'A new owner added '. $request->first_name." ".$request->last_name, 'act_date' => date('Y-m-d'), 'act_time' => date('H:i:s')]);
             return back()->with(['success' => "Car Owner Created Successfully"]);
         } else {
             return back()->with(['error' => 'Something went wrong']);
@@ -115,7 +115,7 @@ class OwnerController extends Controller
         $ow->branch = strtoupper($request->branch);
         $ow->image =$request->has('image') ? $file : $ow->image;
         $ow->save();
-        Audit::create(['user' => Auth::user()->first_name." ".Auth::user()->last_name, 'activity' => 'Updated car owner '. $request->first_name." ".$request->last_name, 'act_date' => date('Y-m-d'), 'act_time' => time('H:i:s')]);
+        Audit::create(['user' => Auth::user()->first_name." ".Auth::user()->last_name, 'activity' => 'Updated car owner '. $request->first_name." ".$request->last_name, 'act_date' => date('Y-m-d'), 'act_time' => date('H:i:s')]);
         return redirect('/car-owners')->with('success', "Car owner $request->first_name, has been updated successfully");
     }
     //===================================================================================================
@@ -178,7 +178,7 @@ class OwnerController extends Controller
         //dd($request->all());
 
         if ($ow->save()) {
-            Audit::create(['user' => Auth::user()->first_name." ".Auth::user()->last_name, 'activity' => 'Car owner details added with car number '.$request->car_number, 'act_date' => date('Y-m-d'), 'act_time' => time('H:i:s')]);
+            Audit::create(['user' => Auth::user()->first_name." ".Auth::user()->last_name, 'activity' => 'Car owner details added with car number '.$request->car_number, 'act_date' => date('Y-m-d'), 'act_time' => date('H:i:s')]);
             return back()->with(['success' => "Car Owner Details Created Successfully"]);
         } else {
             return back()->with(['error' => 'Something went wrong']);
@@ -239,7 +239,7 @@ class OwnerController extends Controller
 
             //dd($request->all());
             $ow->save();
-        Audit::create(['user' => Auth::user()->first_name." ".Auth::user()->last_name, 'activity' => 'Updated Car owner details with car number '.$request->car_number, 'act_date' => date('Y-m-d'), 'act_time' => time('H:i:s')]);
+        Audit::create(['user' => Auth::user()->first_name." ".Auth::user()->last_name, 'activity' => 'Updated Car owner details with car number '.$request->car_number, 'act_date' => date('Y-m-d'), 'act_time' => date('H:i:s')]);
         return redirect('/car-owners-details')->with('success', "Car owner details has been updated successfully");
     }
 }
