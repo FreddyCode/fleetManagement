@@ -11,7 +11,7 @@
 |
 */
 
-Route::get('/', function () {
+Route::get('/',['as'=>'/'], function () {
     return view('login');
 });
 Route::group(['middleware' => ['auth']], function () {
