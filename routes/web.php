@@ -11,9 +11,9 @@
 |
 */
 
-Route::get('/',['as'=>'/'], function () {
-    return view('login');
-});
+
+Route::get('/', ['as' => '/', 'uses' => 'Controller@IndexPage']);
+
 Route::group(['middleware' => ['auth']], function () {
     Route::get('/dashboard', ['as' => 'getDashboard', 'uses' => 'DashboardController@Dashboard']);
     //=============================USERS================================================
