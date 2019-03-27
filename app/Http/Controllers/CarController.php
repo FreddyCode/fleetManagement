@@ -21,9 +21,9 @@ class CarController extends Controller
             ['car_name.required'=>'You need to enter a car type',
                 'car_name.unique'=>"$request->car_name already exist!"]
         );
+        Audit::create(['user' => Auth::user()->first_name." ".Auth::user()->last_name, 'activity' => 'A new car added '. $request->car_name, 'act_date' => date('Y-m-d'), 'act_time' => time('H:i:s')]);
         if($request->ajax())
         {
-            //Audit::create(['user' => Auth::user()->first_name." ".Auth::user()->last_name, 'activity' => 'A new car added '. $request->car_name, 'act_date' => date('Y-m-d'), 'act_time' => time('H:i:s')]);
             return response()->json(Car::create($request->all()));
         }else{
             return response()->json(['error' => 'Something went wrong!'], 422);
