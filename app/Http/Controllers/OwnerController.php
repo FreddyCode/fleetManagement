@@ -16,13 +16,13 @@ class OwnerController extends Controller
 {
     public function Owner()
     {
-        return view('owners.addOwner');
+        return view('Owners.addOwner');
     }
 
     public function OwnersList()
     {
         $owners = CarOwner::all();
-        return view('owners.listOwner',compact('owners'));
+        return view('Owners.listOwner',compact('owners'));
     }
 
     public function PostOwner(Request $request)
