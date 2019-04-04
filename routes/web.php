@@ -61,7 +61,7 @@ Route::group(['middleware' => ['auth']], function () {
     Route::get('/payments-list',['as'=>'payments','uses'=>'PaymentController@Payments']);
     Route::get('/template',['as'=>'template','uses'=>'PaymentController@template']);
     Route::get('/search',['as'=>'search','uses'=>'PaymentController@result']);
-    Route::post('/payment',['as'=>'Payments','uses'=>'PaymentController@postPayment']);
+    Route::post('/post-payment',['as'=>'Payments','uses'=>'PaymentController@postPayment']);
 
     //====================================Drivers=====================================================
     Route::get('/add-driver',['as'=>'addDriver','uses'=>'DriversController@addDriver']);

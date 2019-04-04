@@ -30,7 +30,7 @@
                     <label for="car-name">Car Type</label>
                 </div>
                 <div class="col-lg-6">
-                    <input type="text" class="form-control" name="car_name" id = "car_name" value="{{old('car_name')}}">
+                    <input type="text" class="form-control" name="car_name" id = "car_name" >
                 </div>
             </div>
             <div class="form-group">
@@ -71,7 +71,7 @@
                     swal('SUCCESS',
                         'Car '+data.car_name+' saved successfully',
                         'success');
-                    $(this).trigger('reset');
+
                 }).error(function (data,status,error) {
                     console.log(data);
                     var response = $.parseJSON(data.responseText)
@@ -84,7 +84,7 @@
                             button: "OK",
                         });
 
-
+                        $(this).trigger('reset');
                     });
 
 

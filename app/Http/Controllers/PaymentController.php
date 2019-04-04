@@ -99,6 +99,7 @@ class PaymentController extends Controller
           //dd($owner->email);
           $payment = $this->paymentsList();
           $this->sendEmail($owner, $payment);
+
           return redirect()->back()->with(['success' => 'Payment made successfully']);
       } else {
           return redirect()->back()->with(['error' => 'Payment not successful']);
