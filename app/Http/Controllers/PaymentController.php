@@ -93,7 +93,7 @@ class PaymentController extends Controller
         $pay->total_amount = $request->amount - $totalexpense;
         $pay->owner_id = $request->owner_id;
         $pay->user_id = $request->user_id;
-         //dd($pay);
+         dd($pay);
       if ($pay->save()) {
           return redirect()->back()->with(['success' => 'Payment made successfully']);
       }
