@@ -95,10 +95,10 @@ class PaymentController extends Controller
         $pay->user_id = $request->user_id;
          //dd($pay);
       if ($pay->save()) {
-          $owner = $this->getOwner($request->email)->first();
-          //dd($owner->email);
-          $payment = $this->paymentsList();
-          $this->sendEmail($owner, $payment);
+//          $owner = $this->getOwner($request->email)->first();
+//          //dd($owner->email);
+//          $payment = $this->paymentsList();
+//          $this->sendEmail($owner, $payment);
 
           return redirect()->back()->with(['success' => 'Payment made successfully']);
       } else {
