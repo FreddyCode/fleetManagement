@@ -95,23 +95,18 @@ class PaymentController extends Controller
         $pay->user_id = $request->user_id;
          dd($pay);
       if ($pay->save()) {
-          $owner = $this->getOwner($request->email)->first();
-          //dd($owner->email);
-          $payment = $this->paymentsList();
-          $this->sendEmail($owner, $payment);
-
           return redirect()->back()->with(['success' => 'Payment made successfully']);
-      } else {
-          return redirect()->back()->with(['error' => 'Payment not successful']);
       }
-
         }catch(\Swift_TransportException $e){
             \Log::error($e->getMessage());
             return redirect()->back()->with(['error' => "Payment receipt not sent. Check if you have internet"]);
         }
 
     }
-
+//$owner = $this->getOwner($request->email)->first();
+//    //dd($owner->email);
+//$payment = $this->paymentsList();
+//$this->sendEmail($owner, $payment);
     private function sendEmail($owner,$payment)
     {
         Mail::send('payments.payment-text',[
