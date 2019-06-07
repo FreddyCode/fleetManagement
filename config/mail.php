@@ -56,7 +56,7 @@ return [
     */
 
     'from' => [
-        'address' => env('MAIL_FROM_ADDRESS', 'enshika.enshika@gmail.com'),
+        'address' => env('MAIL_FROM_ADDRESS', 'fred.ahanogbe@gmail.com'),
         'name' => env('MAIL_FROM_NAME', 'Enshika Ghana'),
     ],
 
@@ -84,9 +84,9 @@ return [
     |
     */
 
-    'username' => env('enshika.enshika@gmail.com'),
+    'username' => env('fred.ahanogbe@gmail.com'),
 
-    'password' => env('0557026242'),
+    'password' => env('nqzifgzorfavjvuy'),
 
     /*
     |--------------------------------------------------------------------------

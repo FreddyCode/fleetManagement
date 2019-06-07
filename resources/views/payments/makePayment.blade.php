@@ -69,11 +69,11 @@
                 @endif
             <form class="" action="{{route('payments')}}" method="post" >
                 {!!csrf_field()!!}
-                <input type="text" name="email" id="email" class="form-control"
+                <input type="hidden" name="email" id="email" class="form-control"
                        value="{{$owners->email}}" required>
-                <input type="text" name="owner_id" id="owner_id" class="form-control"
+                <input type="hidden" name="owner_id" id="owner_id" class="form-control"
                        value="{{$owners->owner_id}}" required>
-                <input type="text" name="user_id" id="user_id" class="form-control"
+                <input type="hidden" name="user_id" id="user_id" class="form-control"
                        value="{{ Auth::user()->id}}" required>
                 <div class="row">
                     <div class="col-lg-12 col-md-12 col-sm-12">

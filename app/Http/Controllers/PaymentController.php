@@ -79,7 +79,7 @@ class PaymentController extends Controller
             ['month.required'=>'Please select Month',
                 'year.required'=>'Please select Year',
                 'amount.required'=>'Please input an amount']);
-        try{
+      //  try{
         $pay = new Payment();
         $pay->month = $request->month;
         $pay->year = $request->year;
@@ -101,10 +101,10 @@ class PaymentController extends Controller
         $this->sendEmail($owner, $payment);
           return redirect()->back()->with(['success' => 'Payment made successfully']);
       }
-        }catch(\Swift_TransportException $e){
-            \Log::error($e->getMessage());
-            return redirect()->back()->with(['error' => "Payment receipt not sent. Check if you have internet"]);
-        }
+//        }catch(\Swift_TransportException $e){
+//            \Log::error($e->getMessage());
+//            return redirect()->back()->with(['error' => "Payment receipt not sent. Check if you have internet"]);
+//        }
 
     }
 //$owner = $this->getOwner($request->email)->first();
