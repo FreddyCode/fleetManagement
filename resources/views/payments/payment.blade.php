@@ -44,11 +44,6 @@
             Search Car Owner
         </header>
         <div class="panel-body">
-            @if(session('error'))
-                <div class="alert alert-danger">
-                    {{session('error')}}
-                </div>
-            @endif
             <form class="form-horizontal " action="{{route('search')}}" method="get" >
                 <div class="form-group has-success">
                     <div class="col-lg-1"></div>

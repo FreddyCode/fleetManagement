@@ -48,7 +48,7 @@
             Make Payment to {{$owners->first_name." ".$owners->last_name}}
         </header>
         <div class="panel-body">
-            <form class="" action="{{route('Payments')}}" method="post" >
+
                 {!!csrf_field()!!}
                 @if(session('success'))
                     <div class="alert alert-success">
@@ -69,11 +69,12 @@
                         {{session('error')}}
                     </div>
                 @endif
-                <input type="hidden" name="email" id="email" class="form-control"
+            <form class="" action="{{route('Payments')}}" method="post" >
+                <input type="text" name="email" id="email" class="form-control"
                        value="{{$owners->email}}" required>
-                <input type="hidden" name="owner_id" id="owner_id" class="form-control"
+                <input type="text" name="owner_id" id="owner_id" class="form-control"
                        value="{{$owners->owner_id}}" required>
-                <input type="hidden" name="user_id" id="user_id" class="form-control"
+                <input type="text" name="user_id" id="user_id" class="form-control"
                        value="{{ Auth::user()->id}}" required>
                 <div class="row">
                     <div class="col-lg-12 col-md-12 col-sm-12">
@@ -167,28 +168,28 @@
         <header class="panel-heading">
             Search Car Owner
         </header>
-        <div class="panel-body">
-            <form class="form-horizontal " action="{{route('search')}}" method="get" >
-                <div class="form-group has-success">
-                    <div class="col-lg-1"></div>
-                    <div class="col-sm-10">
-                        <div class="input-group">
-                            <select class="form-control selectpicker" data-show-subtext="true" data-live-search="true" name="owner_id" required>
-                                <option value="">Select Code</option>
-                                @foreach($carowners as $key=>$o)
-                                    <option value="{{$o->owner_id}}">{{$o->code." ".$o->first_name." ".$o->last_name}}</option>
-                                @endforeach
-                            </select>
-                            <div class="input-group-btn">
-                                <button type="submit" class="btn btn-default">
-                                    <span class="fa fa-search"></span>
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </form>
-        </div>
+        {{--<div class="panel-body">--}}
+            {{--<form class="form-horizontal " action="{{route('search')}}" method="get" >--}}
+                {{--<div class="form-group has-success">--}}
+                    {{--<div class="col-lg-1"></div>--}}
+                    {{--<div class="col-sm-10">--}}
+                        {{--<div class="input-group">--}}
+                            {{--<select class="form-control selectpicker" data-show-subtext="true" data-live-search="true" name="owner_id" required>--}}
+                                {{--<option value="">Select Code</option>--}}
+                                {{--@foreach($carowners as $key=>$o)--}}
+                                    {{--<option value="{{$o->owner_id}}">{{$o->code." ".$o->first_name." ".$o->last_name}}</option>--}}
+                                {{--@endforeach--}}
+                            {{--</select>--}}
+                            {{--<div class="input-group-btn">--}}
+                                {{--<button type="submit" class="btn btn-default">--}}
+                                    {{--<span class="fa fa-search"></span>--}}
+                                {{--</button>--}}
+                            {{--</div>--}}
+                        {{--</div>--}}
+                    {{--</div>--}}
+                {{--</div>--}}
+            {{--</form>--}}
+        {{--</div>--}}
         <header class="panel-heading">
             Car Owner Information
         </header>
