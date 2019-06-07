@@ -168,28 +168,28 @@
         <header class="panel-heading">
             Search Car Owner
         </header>
-        {{--<div class="panel-body">--}}
-            {{--<form class="form-horizontal " action="{{route('search')}}" method="get" >--}}
-                {{--<div class="form-group has-success">--}}
-                    {{--<div class="col-lg-1"></div>--}}
-                    {{--<div class="col-sm-10">--}}
-                        {{--<div class="input-group">--}}
-                            {{--<select class="form-control selectpicker" data-show-subtext="true" data-live-search="true" name="owner_id" required>--}}
-                                {{--<option value="">Select Code</option>--}}
-                                {{--@foreach($carowners as $key=>$o)--}}
-                                    {{--<option value="{{$o->owner_id}}">{{$o->code." ".$o->first_name." ".$o->last_name}}</option>--}}
-                                {{--@endforeach--}}
-                            {{--</select>--}}
-                            {{--<div class="input-group-btn">--}}
-                                {{--<button type="submit" class="btn btn-default">--}}
-                                    {{--<span class="fa fa-search"></span>--}}
-                                {{--</button>--}}
-                            {{--</div>--}}
-                        {{--</div>--}}
-                    {{--</div>--}}
-                {{--</div>--}}
-            {{--</form>--}}
-        {{--</div>--}}
+        <div class="panel-body">
+            <form class="form-horizontal " action="{{route('search')}}" method="get" >
+                <div class="form-group has-success">
+                    <div class="col-lg-1"></div>
+                    <div class="col-sm-10">
+                        <div class="input-group">
+                            <select class="form-control selectpicker" data-show-subtext="true" data-live-search="true" name="owner_id" required>
+                                <option value="">Select Code</option>
+                                @foreach($carowners as $key=>$o)
+                                    <option value="{{$o->owner_id}}">{{$o->code." ".$o->first_name." ".$o->last_name}}</option>
+                                @endforeach
+                            </select>
+                            <div class="input-group-btn">
+                                <button type="submit" class="btn btn-default">
+                                    <span class="fa fa-search"></span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
         <header class="panel-heading">
             Car Owner Information
         </header>
