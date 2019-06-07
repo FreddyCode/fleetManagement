@@ -93,14 +93,14 @@ class PaymentController extends Controller
         $pay->total_amount = $request->amount - $totalexpense;
         $pay->owner_id = $request->owner_id;
         $pay->user_id = $request->user_id;
-         dd($pay);
+         //dd($pay);
        $pay->save();
-          return redirect()->back()->with(['success' => 'Payment made successfully']);
+          return redirect('/payment')->with(['success' => 'Payment made successfully']);
 
-        }catch(\Swift_TransportException $e){
-            \Log::error($e->getMessage());
-            return redirect()->back()->with(['error' => "Payment receipt not sent. Check if you have internet"]);
-        }
+//        }catch(\Swift_TransportException $e){
+//            \Log::error($e->getMessage());
+//            return redirect('/payment')->with(['error' => "Payment receipt not sent. Check if you have internet"]);
+//        }
 
     }
 //$owner = $this->getOwner($request->email)->first();
