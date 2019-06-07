@@ -79,7 +79,7 @@ class PaymentController extends Controller
             ['month.required'=>'Please select Month',
                 'year.required'=>'Please select Year',
                 'amount.required'=>'Please input an amount']);
-        try{
+        //try{
         $pay = new Payment();
         $pay->month = $request->month;
         $pay->year = $request->year;
@@ -107,6 +107,7 @@ class PaymentController extends Controller
 //    //dd($owner->email);
 //$payment = $this->paymentsList();
 //$this->sendEmail($owner, $payment);
+
     private function sendEmail($owner,$payment)
     {
         Mail::send('payments.payment-text',[
