@@ -95,7 +95,7 @@ class PaymentController extends Controller
         $pay->user_id = $request->user_id;
          //dd($pay);
       if ($pay->save()) {
-          /$owner = $this->getOwner($request->email)->first();
+          $owner = $this->getOwner($request->email)->first();
    //dd($owner->email);
         $payment = $this->paymentsList();
         $this->sendEmail($owner, $payment);
