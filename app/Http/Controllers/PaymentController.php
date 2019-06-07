@@ -79,7 +79,7 @@ class PaymentController extends Controller
             ['month.required'=>'Please select Month',
                 'year.required'=>'Please select Year',
                 'amount.required'=>'Please input an amount']);
-      //  try{
+       try{
         $pay = new Payment();
         $pay->month = $request->month;
         $pay->year = $request->year;
@@ -101,10 +101,10 @@ class PaymentController extends Controller
         $this->sendEmail($owner, $payment);
           return redirect()->back()->with(['success' => 'Payment made successfully']);
       }
-//        }catch(\Swift_TransportException $e){
-//            \Log::error($e->getMessage());
-//            return redirect()->back()->with(['error' => "Payment receipt not sent. Check if you have internet"]);
-//        }
+        }catch(\Swift_TransportException $e){
+            \Log::error($e->getMessage());
+            return redirect()->back()->with(['error' => "Whoops. Something went wrong! Email might not be sent"]);
+        }
 
     }
 //$owner = $this->getOwner($request->email)->first();
@@ -118,7 +118,7 @@ class PaymentController extends Controller
             'payment'=>$payment
         ],function($message) use ($owner,$payment){
             $message->to($owner->email);
-            $message->from('enshika.enshika@gmail.com','Enshika Receipt');
+            $message->from('fred.ahanogbe@gmail.com','Enshika Receipt');
            $message->subject("Hello $owner->first_name, your {$payment[0]->month} {$payment[0]->year}, Payment.");
             Audit::create(['user' => Auth::user()->first_name." ".Auth::user()->last_name, 'activity' => 'Payment sent to '.$owner->first_name." ".$owner->last_name, 'act_date' => date('Y-m-d'), 'act_time' => date('H:i:s')]);
           //  $message->subject("Hello $owner->first_name, your taxi charges receipt");

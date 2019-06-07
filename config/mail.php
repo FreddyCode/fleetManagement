@@ -84,9 +84,9 @@ return [
     |
     */
 
-    'username' => env('fred.ahanogbe@gmail.com'),
+    'username' => 'fred.ahanogbe@gmail.com',
 
-    'password' => env('nqzifgzorfavjvuy'),
+    'password' =>'nqzifgzorfavjvuy',
 
     /*
     |--------------------------------------------------------------------------
