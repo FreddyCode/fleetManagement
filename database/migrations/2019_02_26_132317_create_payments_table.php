@@ -24,6 +24,8 @@ class CreatePaymentsTable extends Migration
             $table->decimal('reg_amount',8,2)->default(0.00);
             $table->decimal('fuel_amount',8,2)->default(0.00);
             $table->decimal('repairs_amount',8,2)->default(0.00);
+            $table->decimal('total_expense',8,2)->default(0.00);
+            $table->decimal('total_amount',8,2)->default(0.00);
             $table->integer('user_id')->unsigned();
             $table->timestamps();
             $table->foreign('owner_id')->references('owner_id')->on('carOwners');
