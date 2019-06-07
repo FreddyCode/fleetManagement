@@ -48,8 +48,6 @@
             Make Payment to {{$owners->first_name." ".$owners->last_name}}
         </header>
         <div class="panel-body">
-
-                {!!csrf_field()!!}
                 @if(session('success'))
                     <div class="alert alert-success">
                         {{session('success')}}
@@ -69,7 +67,8 @@
                         {{session('error')}}
                     </div>
                 @endif
-            <form class="" action="{{route('Payments')}}" method="post" >
+            <form class="" action="{{route('payments')}}" method="post" >
+                {!!csrf_field()!!}
                 <input type="text" name="email" id="email" class="form-control"
                        value="{{$owners->email}}" required>
                 <input type="text" name="owner_id" id="owner_id" class="form-control"
