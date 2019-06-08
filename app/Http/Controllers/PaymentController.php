@@ -118,7 +118,7 @@ class PaymentController extends Controller
             'payment'=>$payment
         ],function($message) use ($owner,$payment){
             $message->to($owner->email);
-            $message->from('fred.ahanogbe@gmail.com','Enshika Receipt');
+            $message->from('enshikafleetmanager@gmail.com','Enshika Receipt');
            $message->subject("Hello $owner->first_name, your {$payment[0]->month} {$payment[0]->year}, Payment.");
             Audit::create(['user' => Auth::user()->first_name." ".Auth::user()->last_name, 'activity' => 'Payment sent to '.$owner->first_name." ".$owner->last_name, 'act_date' => date('Y-m-d'), 'act_time' => date('H:i:s')]);
           //  $message->subject("Hello $owner->first_name, your taxi charges receipt");
