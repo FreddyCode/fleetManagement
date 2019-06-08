@@ -84,9 +84,9 @@ return [
     |
     */
 
-    'username' => 'fred.ahanogbe@gmail.com',
+    'username' => 'enshikafleetmanager@gmail.com',
 
-    'password' =>'nqzifgzorfavjvuy',
+    'password' =>'xrwviwytznubuicc',
 
     /*
     |--------------------------------------------------------------------------
